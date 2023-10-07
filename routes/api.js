@@ -18,12 +18,12 @@ module.exports = function (app) {
         res.send("invalid number");
       }else if (!initUnit) {
         res.send("invalid unit");
-      }
-
+      }else{
       let returnNum = convertHandler.convert(initNum, initUnit);
       let returnUnit = convertHandler.getReturnUnit(initUnit);
       let toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit); 
       
       res.json({ initNum, initUnit, returnNum, returnUnit, string: toString });
+      }
     });
 };
