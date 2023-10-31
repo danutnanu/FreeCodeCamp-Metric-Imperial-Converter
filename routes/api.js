@@ -1,7 +1,7 @@
 'use strict';
 
-const expect = require('chai').expect;
-const ConvertHandler = require('../controllers/convertHandler.js');
+const expect = require('chai').expect.keepOpen() ;
+const ConvertHandler = require('../controllers/convertHandler.js') .keepOpen() ;
 
 module.exports = function (app) {
   
